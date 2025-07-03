@@ -1,3 +1,4 @@
+# install gemini-cli with whisper.cpp, kokoro-fastapi, voicemode:
     #1. install whisper.cpp for voicemode STT/ASR:
     git clone https://github.com/ggml-org/whisper.cpp.git
     cd whisper.cpp
