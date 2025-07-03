@@ -15,6 +15,7 @@
     git clone --depth 1 https://github.com/diyism/Kokoro-FastAPI-zh
     cd Kokoro-FastAPI-zh
     ./start-cpu.sh       #if in conda, need first "conda deactivate", because this script will create .venv
+    #maybe need to do: source .venv/bin/actiate; uv pip install "numpy==1.26.4"; deactivate; then ./start-cpu.sh again
     export TTS_BASE_URL=http://127.0.0.1:8880/v1
 
     #3. install gemini-cli:
