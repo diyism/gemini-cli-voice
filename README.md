@@ -12,6 +12,9 @@
     export STT_BASE_URL=http://127.0.0.1:2022/v1
 
     #2. install kokoro-fastapi for voicemode TTS:
+    docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:latest
+    export TTS_BASE_URL=http://127.0.0.1:8880/v1
+    #or manually:
     git clone https://github.com/remsky/Kokoro-FastAPI.git
     cd Kokoro-FastAPI
     ./start-cpu.sh       #if failed do: "source .venv/bin/activate" , then do: "pip install uvicorn==0.34.0"
