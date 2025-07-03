@@ -45,6 +45,7 @@
     }
 
     gemini
+    #click login google in the popped browser tab
     #type 'converse' to start voice mode
 
 # Voice Mode
