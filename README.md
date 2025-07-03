@@ -1,4 +1,4 @@
-    #install whisper.cpp
+    #install whisper.cpp:
     git clone https://github.com/ggml-org/whisper.cpp.git
     cd whisper.cpp
     sh ./models/download-ggml-model.sh base
@@ -7,18 +7,20 @@
     ./build/bin/whisper-server -l zh -m models/ggml-base.bin --port 2022
     export STT_BASE_URL=http://127.0.0.1:2022/v1
 
-    #install npm: https://nodejs.org/en/download
-    #install gemini-ci
+    #install npm:
+    #ref: https://nodejs.org/en/download
+    #install gemini-ci:
     npm install -g @google/gemini-cli
     #get first project id from: https://console.cloud.google.com/
     #enable gemini api in: https://console.cloud.google.com/apis/library/cloudaicompanion.googleapis.com?project=<my project id>
     export GOOGLE_CLOUD_PROJECT=<my project id>
 
-    #install voice-mode
+    #install voice-mode mcp into gemini-cli:
     curl -LsSf https://astral.sh/uv/install.sh | sh
-    gemini-cli config set mcp.voice-mode.command "uvx voice-mode"
+    gemini config set mcp.voice-mode.command "uvx voice-mode"
 
     gemini
+    #type 'converse' to start voice mode
 
 # Voice Mode
 
