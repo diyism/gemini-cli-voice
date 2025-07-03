@@ -17,7 +17,20 @@
 
     #install voice-mode mcp into gemini-cli:
     curl -LsSf https://astral.sh/uv/install.sh | sh
-    gemini config set mcp.voice-mode.command "uvx voice-mode"
+    nano ~/.gemini/settings.json
+    #insert and save, now it likes:
+    {
+      "theme": "GitHub Light",
+      "selectedAuthType": "oauth-enterprise",
+      "mcpServers": {
+        "voice-mode": {
+          "command": "uvx",
+          "args": [
+            "voice-mode"
+          ]
+        }
+      }
+    }
 
     gemini
     #type 'converse' to start voice mode
