@@ -14,7 +14,7 @@
     #2. install kokoro-fastapi-zh for voicemode TTS:
     git clone --depth 1 https://github.com/diyism/Kokoro-FastAPI-zh
     cd Kokoro-FastAPI-zh
-    ./start-cpu.sh       #if failed do: "source .venv/bin/activate" , then do: "pip install uvicorn==0.34.0"
+    ./start-cpu.sh       #if in conda, need first "conda deactivate", because this script will create .venv
     export TTS_BASE_URL=http://127.0.0.1:8880/v1
 
     #3. install gemini-cli:
