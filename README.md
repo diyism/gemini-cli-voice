@@ -1,3 +1,11 @@
+    git clone https://github.com/ggml-org/whisper.cpp.git
+    cd whisper.cpp
+    sh ./models/download-ggml-model.sh base
+    cmake -B build
+    cmake --build build --config Release
+    ./build/bin/whisper-server -l zh -m models/ggml-base.bin --port 2022
+    export STT_BASE_URL=http://127.0.0.1:2022/v1
+
     #install npm: https://nodejs.org/en/download
     #install gemini-ci
     npm install -g @google/gemini-cli
