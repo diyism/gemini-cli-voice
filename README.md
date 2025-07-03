@@ -1,3 +1,8 @@
+    #install npm: https://nodejs.org/en/download
+    #install gemini-ci
+    npm install -g @google/gemini-cli
+
+
 # Voice Mode
 
 > **Install via:** `uvx voice-mode` | `pip install voice-mode` | [getvoicemode.com](https://getvoicemode.com)
