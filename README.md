@@ -1,4 +1,4 @@
-    #install whisper.cpp for voicemode STT/ASR:
+    #1. install whisper.cpp for voicemode STT/ASR:
     git clone https://github.com/ggml-org/whisper.cpp.git
     cd whisper.cpp
     sh ./models/download-ggml-model.sh base
@@ -10,14 +10,14 @@
     whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
     export STT_BASE_URL=http://127.0.0.1:2022/v1
 
-    #install kokoro-fastapi for voicemode TTS:
+    #2. install kokoro-fastapi for voicemode TTS:
     git clone https://github.com/remsky/Kokoro-FastAPI.git
     cd Kokoro-FastAPI
     python3 docker/scripts/download_model.py
     ./start-cpu.sh
     export TTS_BASE_URL=http://127.0.0.1:8880/v1
 
-    #install gemini-cli:
+    #3. install gemini-cli:
     #first install npm, ref: https://nodejs.org/en/download
     npm install -g @google/gemini-cli
     #get first project id from: https://console.cloud.google.com/
@@ -25,7 +25,7 @@
     #enable gemini api in: https://console.cloud.google.com/apis/library/cloudaicompanion.googleapis.com?project=<my project id>
     export GOOGLE_CLOUD_PROJECT=<my project id>
 
-    #install voice-mode mcp into gemini-cli:
+    #4. install voice-mode mcp into gemini-cli:
     curl -LsSf https://astral.sh/uv/install.sh | sh
     #open new shell tab or source the installed path
     nano ~/.gemini/settings.json
@@ -43,6 +43,7 @@
       }
     }
 
+    #5. start gemini-cli with voicemode mcp:
     gemini
     #first time, click login google in the popped browser tab
     #type 'converse' to start voice mode
