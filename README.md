@@ -13,6 +13,8 @@
     #enable gemini api in: https://console.cloud.google.com/apis/library/cloudaicompanion.googleapis.com?project=<my project id>
     export GOOGLE_CLOUD_PROJECT=<my project id>
 
+    pip install voice-mode
+
     gemini
 
 # Voice Mode
