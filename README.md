@@ -18,6 +18,7 @@
     git lfs install
     cd api/src/models
     git clone https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh
+    #if failed, "cd Kokoro-82M-v1.1-zh", "git lfs pull", "cd .."
     mv Kokoro-82M-v1.1-zh v1_1-zh
     cp -r v1_1-zh/voices ../voices/v1_1-zh
     cd ../../../
