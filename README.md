@@ -12,11 +12,13 @@
     #install gemini-ci:
     npm install -g @google/gemini-cli
     #get first project id from: https://console.cloud.google.com/
+    #if you're not a google cloud user, skip this step
     #enable gemini api in: https://console.cloud.google.com/apis/library/cloudaicompanion.googleapis.com?project=<my project id>
     export GOOGLE_CLOUD_PROJECT=<my project id>
 
     #install voice-mode mcp into gemini-cli:
     curl -LsSf https://astral.sh/uv/install.sh | sh
+    #open new shell tab or source the installed path
     nano ~/.gemini/settings.json
     #insert and save, now it likes:
     {
