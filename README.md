@@ -14,6 +14,14 @@
     #2. install kokoro-fastapi-zh for voicemode TTS:
     git clone --depth 1 https://github.com/diyism/Kokoro-FastAPI-zh
     cd Kokoro-FastAPI-zh
+
+    git lfs install
+    cd api/src/models
+    git clone https://huggingface.co/hexgrad/Kokoro-82M-v1.1-zh
+    mv Kokoro-82M-v1.1-zh v1_1-zh
+    cp -r v1_1-zh/voices ../voices/v1_1-zh
+    cd ../../../
+    
     ./start-cpu.sh       #if in conda, need first "conda deactivate", because this script will create .venv
     #maybe need to do: source .venv/bin/actiate; uv pip install "numpy==1.26.4"; deactivate; then ./start-cpu.sh again
     export TTS_BASE_URL=http://127.0.0.1:8880/v1
