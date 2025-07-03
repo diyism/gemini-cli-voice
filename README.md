@@ -15,7 +15,7 @@
     git clone https://github.com/remsky/Kokoro-FastAPI.git
     cd Kokoro-FastAPI
     sudo mkdir -p /usr/local/share/kokoro/models
-    python3 docker/scripts/download_model.py --output /usr/local/share/kokoro/models
+    sudo python3 docker/scripts/download_model.py --output /usr/local/share/kokoro/models/
     pip install uvicorn
     ./start-cpu.sh
     export TTS_BASE_URL=http://127.0.0.1:8880/v1
