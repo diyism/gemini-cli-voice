@@ -10,6 +10,13 @@
     whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
     export STT_BASE_URL=http://127.0.0.1:2022/v1
 
+    #install kokoro-fastapi:
+    git clone https://github.com/remsky/Kokoro-FastAPI.git
+    cd Kokoro-FastAPI
+    python3 docker/scripts/download_model.py
+    ./start-cpu.sh
+    export TTS_BASE_URL=http://127.0.0.1:8880/v1
+
     #install npm:
     #ref: https://nodejs.org/en/download
     #install gemini-ci:
