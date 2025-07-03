@@ -17,9 +17,8 @@
     ./start-cpu.sh
     export TTS_BASE_URL=http://127.0.0.1:8880/v1
 
-    #install npm:
-    #ref: https://nodejs.org/en/download
-    #install gemini-ci:
+    #install gemini-cli:
+    #first install npm, ref: https://nodejs.org/en/download
     npm install -g @google/gemini-cli
     #get first project id from: https://console.cloud.google.com/
     #if you're not a google cloud user, skip this step
