@@ -1,4 +1,4 @@
-    #install whisper.cpp:
+    #install whisper.cpp for voicemode STT/ASR:
     git clone https://github.com/ggml-org/whisper.cpp.git
     cd whisper.cpp
     sh ./models/download-ggml-model.sh base
@@ -10,7 +10,7 @@
     whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
     export STT_BASE_URL=http://127.0.0.1:2022/v1
 
-    #install kokoro-fastapi:
+    #install kokoro-fastapi for voicemode TTS:
     git clone https://github.com/remsky/Kokoro-FastAPI.git
     cd Kokoro-FastAPI
     python3 docker/scripts/download_model.py
