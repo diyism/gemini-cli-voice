@@ -13,7 +13,8 @@
     #enable gemini api in: https://console.cloud.google.com/apis/library/cloudaicompanion.googleapis.com?project=<my project id>
     export GOOGLE_CLOUD_PROJECT=<my project id>
 
-    pip install voice-mode
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    gemini-cli config set mcp.voice-mode.command "uvx voice-mode"
 
     gemini
 
