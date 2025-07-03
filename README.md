@@ -11,12 +11,9 @@
     whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
     export STT_BASE_URL=http://127.0.0.1:2022         #without the tail "/v1"
 
-    #2. install kokoro-fastapi for voicemode TTS:
-    docker run -p 8880:8880 ghcr.io/remsky/kokoro-fastapi-cpu:latest
-    export TTS_BASE_URL=http://127.0.0.1:8880/v1
-    #or manually:
-    git clone https://github.com/remsky/Kokoro-FastAPI.git
-    cd Kokoro-FastAPI
+    #2. install kokoro-fastapi-zh for voicemode TTS:
+    git clone https://github.com/diyism/Kokoro-FastAPI-zh
+    cd Kokoro-FastAPI-zh
     ./start-cpu.sh       #if failed do: "source .venv/bin/activate" , then do: "pip install uvicorn==0.34.0"
     export TTS_BASE_URL=http://127.0.0.1:8880/v1
 
