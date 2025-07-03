@@ -49,6 +49,7 @@
     #5. start gemini-cli with voicemode mcp:
     gemini
     #first time, click login google in the popped browser tab
+    #type 'voice_mode_info' the check if all green
     #type 'converse' to start voice mode
 
 # Voice Mode
