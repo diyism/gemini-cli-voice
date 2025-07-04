@@ -43,7 +43,7 @@
     cd gemini-cli-voice
     pip install -e .
     voice-mode
-    #after finished, ctrl+c
+    #if started successfully, ctrl+c to stop it
     nano ~/.gemini/settings.json
     #insert and save, now it likes:
     {
