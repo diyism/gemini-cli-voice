@@ -86,7 +86,7 @@ class ProviderRegistry:
                     base_url=url,
                     healthy=True,
                     models=["gpt4o-mini-tts", "tts-1", "tts-1-hd"] if provider_type == "openai" else ["tts-1"],
-                    voices=["alloy", "echo", "fable", "nova", "onyx", "shimmer"] if provider_type == "openai" else ["af_sky", "af_sarah", "am_adam", "af_nicole", "am_michael", "bf_emma", "bf_isabella", "af_bella", "bm_george", "bm_lewis"],
+                    voices=["alloy", "echo", "fable", "nova", "onyx", "shimmer"] if provider_type == "openai" else ["zf_xiaobei", "zf_xiaoni", "zf_xiaoxiao", "zf_xiaoyi", "zm_yunjian", "zm_yunxi", "zm_yunxia", "zm_yunyang"],
                     last_health_check=datetime.now(timezone.utc).isoformat(),
                     response_time_ms=None,
                     provider_type=provider_type
