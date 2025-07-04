@@ -42,7 +42,7 @@
     git clone https://github.com/diyism/gemini-cli-voice
     cd gemini-cli-voice
     pip install -e .
-    python -m voice-mode
+    voice-mode
     #after finished, ctrl+c
     nano ~/.gemini/settings.json
     #insert and save, now it likes:
