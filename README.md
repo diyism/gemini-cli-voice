@@ -9,7 +9,7 @@
     cmake --build build --config Release
     sudo install ./build/bin/whisper-server /usr/bin/
     whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
-    export STT_BASE_URL=http://127.0.0.1:2022         #without the tail "/v1"
+    export VOICEMODE_STT_BASE_URLS="http://127.0.0.1:2022/v1"
 
     #2. install kokoro-fastapi-zh for voicemode TTS:
     git clone --depth 1 https://github.com/diyism/Kokoro-FastAPI-zh
@@ -25,7 +25,8 @@
     
     ./start-cpu.sh       #if in conda, need first "conda deactivate", because this script will create .venv
     #maybe need to do: source .venv/bin/actiate; uv pip install "numpy==1.26.4"; deactivate; then ./start-cpu.sh again
-    export TTS_BASE_URL=http://127.0.0.1:8880/v1
+    export VOICEMODE_TTS_BASE_URLS="http://127.0.0.1:8880/v1"
+    export VOICEMODE_TTS_VOICES="zf_xiaobei"
 
     #3. install gemini-cli:
     #first install npm, ref: https://nodejs.org/en/download
