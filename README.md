@@ -39,7 +39,8 @@
     #4. install voice-mode mcp into gemini-cli:
     curl -LsSf https://astral.sh/uv/install.sh | sh
     #open new shell tab or source the installed path
-    #if you installed the official version(mbailey/voicemode), first uninstall: pip uninstall voice-mode -y
+    #if you installed the official version(mbailey/voicemode), first uninstall:
+    pip uninstall voice-mode -y
     git clone https://github.com/diyism/gemini-cli-voice
     cd gemini-cli-voice
     pip install -e .
