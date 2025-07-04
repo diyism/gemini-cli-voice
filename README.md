@@ -37,15 +37,12 @@
     export GOOGLE_CLOUD_PROJECT=<my project id>
 
     #4. install voice-mode mcp into gemini-cli:
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    #open new shell tab or source the installed path
     #if you installed the official version(mbailey/voicemode), first uninstall:
-    uv pip uninstall voice-mode -y
-    uv cache clean
+    pip uninstall voice-mode -y
     git clone https://github.com/diyism/gemini-cli-voice
     cd gemini-cli-voice
     pip install -e .
-    uvx voice-mode
+    python -m voice-mode
     #after finished, ctrl+c
     nano ~/.gemini/settings.json
     #insert and save, now it likes:
