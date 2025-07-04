@@ -26,7 +26,7 @@
     ./start-cpu.sh       #if in conda, need first "conda deactivate", because this script will create .venv
     #maybe need to do: source .venv/bin/actiate; uv pip install "numpy==1.26.4"; deactivate; then ./start-cpu.sh again
     export VOICEMODE_TTS_BASE_URLS="http://127.0.0.1:8880/v1"
-    export VOICEMODE_TTS_VOICES="zf_xiaobei"
+    export VOICEMODE_TTS_VOICES="zf_xiaobei"      #available: "zf_xiaobei", "zf_xiaoni", "zf_xiaoxiao", "zf_xiaoyi", "zm_yunjian", "zm_yunxi", "zm_yunxia", "zm_yunyang"
 
     #3. install gemini-cli:
     #first install npm, ref: https://nodejs.org/en/download
