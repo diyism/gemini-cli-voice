@@ -51,10 +51,7 @@
       "selectedAuthType": "oauth-enterprise",
       "mcpServers": {
         "voice-mode": {
-          "command": "uvx",
-          "args": [
-            "voice-mode"
-          ]
+          "command": "voice-mode"
         }
       }
     }
