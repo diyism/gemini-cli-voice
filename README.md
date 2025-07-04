@@ -44,7 +44,7 @@
     uv cache clean
     git clone https://github.com/diyism/gemini-cli-voice
     cd gemini-cli-voice
-    uv pip install -e .
+    pip install -e .
     uvx voice-mode
     #after finished, ctrl+c
     nano ~/.gemini/settings.json
