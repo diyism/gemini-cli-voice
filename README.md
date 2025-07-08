@@ -11,6 +11,9 @@
     #whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
     docker run -dit --name=whisper-server -p 2022:8080 -v /usr/local/share/whisper.cpp/models/ggml-base.bin:/models/ggml-base.bin litongjava/whisper-cpp-server:1.0.0 /app/whisper_http_server_base_httplib -m /models/ggml-base.bin
     export VOICEMODE_STT_BASE_URLS="http://127.0.0.1:2022/v1"
+    #test port:
+    curl http://127.0.0.1:2022/v1/audio/transcriptions -F "a=b"
+    #{"detail":[{"type":"missing","loc":["body","file"],"msg":"Field required","input":null},{"type":"missing","loc":["body","model"],"msg":"Field required","input":null}]}
 
     #2. install kokoro-fastapi-zh for voicemode TTS:
     git clone --depth 1 https://github.com/diyism/Kokoro-FastAPI-zh
@@ -28,6 +31,9 @@
     #maybe need to do: source .venv/bin/actiate; uv pip install "numpy==1.26.4"; deactivate; then ./start-cpu.sh again
     export VOICEMODE_TTS_BASE_URLS="http://127.0.0.1:8880/v1"
     export VOICEMODE_TTS_VOICES="zf_xiaobei"      #available: "zf_xiaobei", "zf_xiaoni", "zf_xiaoxiao", "zf_xiaoyi", "zm_yunjian", "zm_yunxi", "zm_yunxia", "zm_yunyang"
+    #test port:
+    curl http://127.0.0.1:8880/v1/audio/speech -F "a=b"
+    #{"detail":[{"type":"model_attributes_type","loc":["body"],"msg":"Input should be a valid dictionary or object to extract fields from"...
 
     #3. install gemini-cli:
     #first install npm, ref: https://nodejs.org/en/download
