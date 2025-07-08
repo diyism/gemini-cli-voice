@@ -5,10 +5,11 @@
     sh ./models/download-ggml-model.sh base
     sudo mkdir -p /usr/local/share/whisper.cpp/models
     sudo cp ./models/ggml-base.bin /usr/local/share/whisper.cpp/models/
-    cmake -B build
-    cmake --build build --config Release
-    sudo install ./build/bin/whisper-server /usr/bin/
-    whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
+    #cmake -B build
+    #cmake --build build --config Release
+    #sudo install ./build/bin/whisper-server /usr/bin/
+    #whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
+    docker run -dit --name=whisper-server -p 2022:8080 -v /usr/local/share/whisper.cpp/models/ggml-base.bin:/models/ggml-base.bin litongjava/whisper-cpp-server:1.0.0 /app/whisper_http_server_base_httplib -m /models/ggml-base.bin
     export VOICEMODE_STT_BASE_URLS="http://127.0.0.1:2022/v1"
 
     #2. install kokoro-fastapi-zh for voicemode TTS:
