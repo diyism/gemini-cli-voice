@@ -8,10 +8,7 @@
     cmake -B build
     cmake --build build --config Release
     sudo install ./build/bin/whisper-server /usr/bin/
-    #whisper-server is not an openai compatible api:
-    #whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
-
-    CMAKE_ARGS="-DCMAKE_POLICY_VERSION_MINIMUM=3.5" pip install "whisper-cpp-python[server]"
+    whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
     export VOICEMODE_STT_BASE_URLS="http://127.0.0.1:2022/v1"
 
     #2. install kokoro-fastapi-zh for voicemode TTS:
