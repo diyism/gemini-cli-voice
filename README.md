@@ -73,6 +73,10 @@
     }
 
     #5. start gemini-cli with voicemode mcp:
+    export VOICEMODE_STT_BASE_URLS="http://127.0.0.1:2022/v1"
+    export VOICEMODE_TTS_BASE_URLS="http://127.0.0.1:8880/v1"
+    export VOICEMODE_TTS_VOICES="zf_xiaobei"
+    #export GOOGLE_CLOUD_PROJECT=<my project id>
     gemini
     #first time, click login google in the popped browser tab
     #type 'voice_mode_info' the check if all green
