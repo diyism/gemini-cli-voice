@@ -15,6 +15,7 @@
     #docker run -dit --name=whisper-server -p 2022:8080 -v /usr/local/share/whisper.cpp/models/ggml-base.bin:/models/ggml-base.bin litongjava/whisper-cpp-server:1.0.0 /app/whisper_http_server_base_httplib -m /models/ggml-base.bin
 
     pip install vox-box==0.0.12
+    vox-box start --huggingface-repo-id Systran/faster-whisper-small --data-dir ./data-dir --host 127.0.0.1 --port 2022
     export VOICEMODE_STT_BASE_URLS="http://127.0.0.1:2022/v1"
     #test port:
     curl http://127.0.0.1:2022/v1/audio/transcriptions -F "a=b"
