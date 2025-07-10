@@ -82,6 +82,8 @@
     #type 'voice_mode_info' the check if all green
     #type 'converse' to start voice mode
 
+![](./screenshot.png)
+
 # Voice Mode
 
 > **Install via:** `uvx voice-mode` | `pip install voice-mode` | [getvoicemode.com](https://getvoicemode.com)
