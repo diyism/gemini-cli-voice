@@ -14,6 +14,7 @@
     #whisper-cpp-server(https://github.com/litongjava/whisper-cpp-server) is also not an openai compatible api:
     #docker run -dit --name=whisper-server -p 2022:8080 -v /usr/local/share/whisper.cpp/models/ggml-base.bin:/models/ggml-base.bin litongjava/whisper-cpp-server:1.0.0 /app/whisper_http_server_base_httplib -m /models/ggml-base.bin
 
+    #vox-box is an openai compatible api:
     pip install vox-box==0.0.12
     mkdir -p ~/.cache/huggingface/hub/cache/huggingface/
     ln -s ~/.cache/huggingface/hub/models--Systran--faster-whisper-small ~/.cache/huggingface/hub/cache/huggingface/
