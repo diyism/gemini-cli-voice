@@ -10,8 +10,11 @@
     #cmake --build build --config Release
     #sudo install ./build/bin/whisper-server /usr/bin/
     #whisper-server -l zh -m /usr/local/share/whisper.cpp/models/ggml-base.bin --port 2022
-    
-    docker run -dit --name=whisper-server -p 2022:8080 -v /usr/local/share/whisper.cpp/models/ggml-base.bin:/models/ggml-base.bin litongjava/whisper-cpp-server:1.0.0 /app/whisper_http_server_base_httplib -m /models/ggml-base.bin
+
+    #whisper-cpp-server(https://github.com/litongjava/whisper-cpp-server) is also not an openai compatible api:
+    #docker run -dit --name=whisper-server -p 2022:8080 -v /usr/local/share/whisper.cpp/models/ggml-base.bin:/models/ggml-base.bin litongjava/whisper-cpp-server:1.0.0 /app/whisper_http_server_base_httplib -m /models/ggml-base.bin
+
+    pip install vox-box==0.0.12
     export VOICEMODE_STT_BASE_URLS="http://127.0.0.1:2022/v1"
     #test port:
     curl http://127.0.0.1:2022/v1/audio/transcriptions -F "a=b"
