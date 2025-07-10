@@ -80,7 +80,7 @@
     gemini
     #first time, click login google in the popped browser tab
     #type 'voice_mode_info' the check if all green
-    #type 'converse "开始语音对话"' to start voice mode
+    #type 'converse "开始语音对话, 始终用汉语回答"' to start voice mode
     #select 'Yes, always allow all tools from server "voice-mode"'
 
 ![](./screenshot.png)
