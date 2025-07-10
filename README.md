@@ -1,11 +1,11 @@
 # install gemini-cli with whisper.cpp, kokoro-fastapi, voicemode:
     #1. install whisper.cpp for voicemode STT/ASR:
-    git clone https://github.com/ggml-org/whisper.cpp.git
-    cd whisper.cpp
-    sh ./models/download-ggml-model.sh base
-    sudo mkdir -p /usr/local/share/whisper.cpp/models
-    sudo cp ./models/ggml-base.bin /usr/local/share/whisper.cpp/models/
     #whisper-server of whisper.cpp is not an openai compatible api:
+    #git clone https://github.com/ggml-org/whisper.cpp.git
+    #cd whisper.cpp
+    #sh ./models/download-ggml-model.sh base
+    #sudo mkdir -p /usr/local/share/whisper.cpp/models
+    #sudo cp ./models/ggml-base.bin /usr/local/share/whisper.cpp/models/
     #cmake -B build
     #cmake --build build --config Release
     #sudo install ./build/bin/whisper-server /usr/bin/
