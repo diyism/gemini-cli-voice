@@ -1,4 +1,4 @@
-# install gemini-cli with whisper.cpp, kokoro-fastapi, voicemode:
+# install gemini-cli with vox-box, kokoro-fastapi-zh, voicemode-zh:
     #1. install whisper.cpp for voicemode STT/ASR:
     #whisper-server of whisper.cpp is not an openai compatible api:
     #git clone https://github.com/ggml-org/whisper.cpp.git
